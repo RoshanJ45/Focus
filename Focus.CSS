@@ -1,0 +1,45 @@
+ @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+        :root {
+            --x: 50%;
+            --y: 50%;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body {
+            overflow: hidden;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            font-family: "Lexend", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main {
+            z-index: 1;
+        }
+        h1 {
+            font-size: max(10vw, 60px);
+            color: #fff;
+        }
+        #bg,#bg_mask {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: calc(0.7vmax * -1);
+            background: url(https://images.unsplash.com/photo-1503639500730-ff76f54fee06?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTg5NTM5MTJ8&ixlib=rb-4.0.3&q=85) no-repeat center/cover;
+        }
+        #bg {
+            filter: blur(0.7vmax);
+        }
+        #bg_mask {
+            mask-image: radial-gradient(circle 50vmin at var(--x) var(--y),
+                    black 20vmin,
+                    transparent);
+        }
